@@ -2,51 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CrosslineDigital | Coming Soon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CrosslineDigital</title>
   <style>
-    body {
+    body, html {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      padding: 0;
+      font-family: 'Segoe UI', Georgia, serif;
       height: 100vh;
-      text-align: center;
+      display: flex;
+      align-items: center;  /* vertical center */
+      justify-content: center;  /* horizontal center of whole content */
+      background: #fff;
     }
-
-    .logo {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #00c6ff;
-      margin-bottom: 1rem;
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 50px; /* space between logo and text */
     }
-
+    .logo img {
+      width: 500px;
+      height: auto;
+      display: block;
+    }
+    .brand-container {
+      position: relative;
+      text-align: left;
+      /* width to help position absolute */
+      width: max-content;
+    }
+    .brand-name {
+      font-size: 40px;
+      margin: 0;
+      letter-spacing: 2px;
+    }
     .coming-soon {
-      font-size: 50px;
-      margin-bottom: 1rem;
-    }
-
-    .subtext {
-      font-size: 1rem;
-      color: #ccc;
-    }
-
-    footer {
       position: absolute;
-      bottom: 20px;
-      font-size: 0.8rem;
-      color: #888;
+      bottom: -25px;    /* adjust vertical offset as needed */
+      right: 0;
+      font-size: 16px;
+      color: gray;
+      white-space: nowrap; /* prevent wrapping */
     }
   </style>
 </head>
 <body>
-  <div class="logo">CrosslineDigital</div>
-  <div class="coming-soon">🚧 Coming Soon 🚧</div>
-  <div class="subtext">We're working hard to launch our new website. Stay tuned!</div>
-  <footer>© 2025 CrosslineDigital. All rights reserved.</footer>
+  <div class="container">
+    <!-- Logo on the LEFT -->
+    <div class="logo">
+      <img src="Logo_Transparent_1080.png" alt="Company Logo" />
+    </div>
+    
+    <!-- Text on the RIGHT -->
+    <div class="brand-container">
+      <h1 class="brand-name">CROSSLINEDIGITAL</h1>
+      <p class="coming-soon">Coming Soon</p>
+    </div>
+  </div>
 </body>
 </html>
